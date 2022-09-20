@@ -45,7 +45,9 @@ const Main = () => {
             </div>
             <ul className="dots">
                 {
-                    SLIDE.map((dot, idx) => <li className={num === idx ? 'on' : ''}>{dot.id}</li>)
+                    SLIDE.map((dot, idx) => <li className={num === idx ? 'on' : ''}
+                        onClick={() => MSG.current.swiper.slideTo(idx + 1)}
+                    >{dot.id}</li>)
                 }
             </ul>
             <div className="tab">
